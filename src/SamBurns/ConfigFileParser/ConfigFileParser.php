@@ -42,7 +42,7 @@ class ConfigFileParser
             case ('ini'):
                 return new IniFile($pathToFile, $fileContentsRetriever);
             case ('php'):
-                return new PhpArrayFile($pathToFile, $fileContentsRetriever);
+                return new PhpArrayFile($pathToFile);
             case ('json'):
                 return new JsonFile($pathToFile, $fileContentsRetriever);
             case ('yaml'):
