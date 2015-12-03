@@ -1,5 +1,5 @@
 <?php
-namespace SamBurns\ConfigFileParser\FileParsing;
+namespace SamBurns\ConfigFileParser\File;
 
 interface ParsableFile
 {

@@ -1,7 +1,7 @@
 <?php
-namespace SamBurns\ConfigFileParser\FileParsing\ParsableFile;
+namespace SamBurns\ConfigFileParser\File\ParsableFile;
 
-use SamBurns\ConfigFileParser\FileParsing\ParsableFile;
+use SamBurns\ConfigFileParser\File\ParsableFile;
 use SamBurns\ConfigFileParser\FileReading\FileContentsRetriever;
 
 class JsonFile implements ParsableFile

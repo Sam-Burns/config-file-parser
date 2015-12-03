@@ -1,7 +1,7 @@
 <?php
 namespace SamBurns\ConfigFileParser\Test;
 
-use SamBurns\ConfigFileParser\FileParsing\ParsableFile\JsonFile;
+use SamBurns\ConfigFileParser\File\ParsableFile\JsonFile;
 use SamBurns\ConfigFileParser\FileReading\FileContentsRetriever;
 use PHPUnit_Framework_TestCase as TestCase;
 

@@ -1,7 +1,7 @@
 <?php
 namespace SamBurns\ConfigFileParser\Test;
 
-use SamBurns\ConfigFileParser\FileParsing\ParsableFileFactory;
+use SamBurns\ConfigFileParser\ConfigFileParser;
 use PHPUnit_Framework_TestCase as TestCase;
 
 class ReadingVariousFileFormatTest extends TestCase
@@ -15,14 +15,11 @@ class ReadingVariousFileFormatTest extends TestCase
     public function testReadingFileContents($filename, $errorMessage)
     {
         // ARRANGE
-        $parsableFileFactory = new ParsableFileFactory();
-        $parsableFile = $parsableFileFactory->getParsableFileFromPath(
-            TEST_DIR . '/fixtures/file_formats/' . $filename
-        );
+        $configFileParser = new ConfigFileParser();
         $expectedArray = ['node1' => ['node2' => 'value']];
 
         // ACT
-        $arrayReadFromFile = $parsableFile->toArray();
+        $arrayReadFromFile = $configFileParser->parseConfigFile(TEST_DIR . '/fixtures/file_formats/' . $filename);
 
         // ASSERT
         $this->assertEquals($expectedArray, $arrayReadFromFile, $errorMessage);
