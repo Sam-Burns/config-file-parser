@@ -25,7 +25,7 @@ class ReadingVariousFileFormatTest extends TestCase
         $this->assertEquals($expectedArray, $arrayReadFromFile, $errorMessage);
     }
 
-    public function provideFilenames()
+    public function provideFilenames(): array
     {
         return [
             ['config.ini',  'Error parsing .ini config file'],

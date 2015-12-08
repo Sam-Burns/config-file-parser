@@ -16,11 +16,8 @@ class ConfigFileParser
     /**
      * @throws FileFormatNotParsable
      * @throws FileNotReadable
-     *
-     * @param $pathToFile
-     * @return array
      */
-    public function parseConfigFile($pathToFile)
+    public function parseConfigFile(string $pathToFile): array
     {
         $file = $this->getParsableFileFromPath($pathToFile);
         return $file->toArray();
@@ -28,11 +25,8 @@ class ConfigFileParser
 
     /**
      * @throws FileFormatNotParsable
-     *
-     * @param string $pathToFile
-     * @return ParsableFile
      */
-    private function getParsableFileFromPath($pathToFile)
+    private function getParsableFileFromPath(string $pathToFile): ParsableFile
     {
         $fileExtension = pathinfo($pathToFile)['extension'];
 

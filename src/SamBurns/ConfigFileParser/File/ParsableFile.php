@@ -3,8 +3,5 @@ namespace SamBurns\ConfigFileParser\File;
 
 interface ParsableFile
 {
-    /**
-     * @return array
-     */
-    public function toArray();
+    public function toArray(): array;
 }
